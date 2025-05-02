@@ -14,11 +14,23 @@
     <h2 class="title">Danh sách sản phẩm</h2>
     <form action="" method="get">
         <input type="text" placeholder="Nhập từ khóa tìm kiếm" name="keyword" id="keyword">
-        <input type="submit" value="Tìm kiếm">
+        <input type="submit" id="submit" value="Tìm kiếm">
     </form>
+    <select name="sort" id="sort">
+        <option value="id" selected>Mặc định</option>
+        <option value="price">Giá thấp đến cao</option>
+        <option value="-price">Giá cao tới thấp</option>
+        <option value="-discountPercentage">Giảm giá nhiều</option>
+    </select>
     <div class="inner-list-products">
     </div>
 
-    <script src="./js/script.js"></script>
+    <div class="pagination">
+        <button class="button-pre">Pre</button>
+        <div class="current-page">1</div>
+        <button class="button-next">Next</button>
+    </div>
+
+    <script type="module" src="./js/script.js"></script>
 </body>
 </html>
